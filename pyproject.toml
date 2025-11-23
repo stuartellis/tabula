@@ -32,7 +32,7 @@ select = ["ALL"]
 # Disable rules for compatibility with ruff formatter:
 # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
 ignore = [
-  "COM812", "COM819",
+  "COM812", "COM819", "D103",
   "D104", "D206", "D300",
   "E111", "E114", "E117",
   "ISC001", "ISC002",
@@ -89,6 +89,5 @@ output_format = "md"
 mask_initial_release = true
 
 [tool.semantic_release.publish]
-# Create GitLab releases
 upload_to_vcs_release = true
 dist_glob_patterns = []
