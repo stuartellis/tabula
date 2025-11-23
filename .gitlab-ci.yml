@@ -29,6 +29,8 @@ semantic-release:
   script:
     - semantic-release version --print
     - semantic-release version
+    - semantic-release changelog
+    - semantic-release publish
 
   cache:
     paths:
