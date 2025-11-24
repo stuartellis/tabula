@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.2 (2025-11-24)
+
+### Bug Fixes
+
+- **tooling**: Add LICENSE file
+  ([`8434fc6`](https://gitlab.com/stuartellis-org/examples/tabula/-/commit/8434fc6bc0766559229c96bdfa6d0265b18f67e0))
+
+
 ## v0.2.1 (2025-11-24)
 
 ### Bug Fixes
