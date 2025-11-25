@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.3.0 (2025-11-25)
+
+### Features
+
+- **tooling**: Add project tasks and tools
+  ([`f7394cb`](https://gitlab.com/stuartellis-org/examples/tabula/-/commit/f7394cb693563d4df5bb1089880187d7af925525))
+
+
 ## v0.2.2 (2025-11-24)
 
 ### Bug Fixes
