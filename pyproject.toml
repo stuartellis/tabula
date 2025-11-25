@@ -10,6 +10,9 @@ requires-python = ">=3.14"
 dependencies = [
 ]
 
+[project.scripts]
+tabula = "tabula.cli:main"
+
 [tool.poetry]
 packages = [{include = "tabula", from = "src"}]
 
@@ -20,6 +23,15 @@ poetry-plugin-export = ">=1.9"
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
+[dependency-groups]
+dev = [
+    "ruff (>=0.14.6,<0.15.0)",
+    {include-group = "test"}
+]
+test = [
+    "pytest (>=9.0.1,<10.0.0)"
+]
+
 [tool.ruff]
 src = ["src", "tests"]
 target-version = "py314"
@@ -29,7 +41,9 @@ indent-width = 4
 [tool.ruff.lint]
 select = ["ALL"]
 
-# Disable rules for compatibility with ruff formatter:
+# Disable D103 so that documentation is not mandatory.
+# Disable T201 to allow print().
+# Disable rules to be compatible with ruff formatter:
 # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
 ignore = [
   "COM812", "COM819", "D103",
@@ -37,7 +51,7 @@ ignore = [
   "E111", "E114", "E117",
   "ISC001", "ISC002",
   "Q000", "Q001", "Q002", "Q003",
-  "W191"
+  "T201", "W191"
 ]
 
 [tool.ruff.lint.pydocstyle]
